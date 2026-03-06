@@ -6,20 +6,22 @@ public class MoleController : MonoBehaviour
     public float upPosition = 0.5f;
     public float downPosition = -0.5f;
     public float speed = 2f;
-    public float waitTime = 1f;
+    public float waitTimeMin = 0.5f;
+    public float waitTimeMax = 3f;
 
     private Vector3 startPos;
     private bool movingUp = true;
     private float waitTimer = 0f;
     private bool waiting = false;
-    private bool isActive = false; 
+    private bool isActive = false;
 
     void Start()
     {
         startPos = transform.position;
-        transform.position = new Vector3(startPos.x, 
-                                         startPos.y + downPosition, 
-                                         startPos.z);
+        transform.position = new Vector3(startPos.x, startPos.y + downPosition, startPos.z);
+        // Jeder Mole startet zu einer anderen Zeit
+        waitTimer = Random.Range(0f, waitTimeMax);
+        waiting = true;
     }
 
     void Update()
@@ -33,8 +35,8 @@ public class MoleController : MonoBehaviour
             return;
         }
 
-        float targetY = movingUp 
-            ? startPos.y + upPosition 
+        float targetY = movingUp
+            ? startPos.y + upPosition
             : startPos.y + downPosition;
 
         Vector3 target = new Vector3(startPos.x, targetY, startPos.z);
@@ -44,8 +46,9 @@ public class MoleController : MonoBehaviour
         if (Vector3.Distance(transform.position, target) < 0.01f)
         {
             movingUp = !movingUp;
+            // Zufällige Wartezeit nur wenn unten
             waiting = true;
-            waitTimer = waitTime;
+            waitTimer = movingUp ? 0.2f : Random.Range(waitTimeMin, waitTimeMax);
         }
     }
 
@@ -54,19 +57,17 @@ public class MoleController : MonoBehaviour
         isActive = active;
         if (!active)
         {
-            transform.position = new Vector3(startPos.x, 
-                                             startPos.y + downPosition, 
-                                             startPos.z);
+            transform.position = new Vector3(startPos.x, startPos.y + downPosition, startPos.z);
+            movingUp = true;
         }
     }
 
     public void OnHit()
     {
-        transform.position = new Vector3(startPos.x, 
-                                         startPos.y + downPosition, 
-                                         startPos.z);
+        Debug.Log("MOLE HIT: " + gameObject.name);
+        transform.position = new Vector3(startPos.x, startPos.y + downPosition, startPos.z);
         movingUp = true;
         waiting = true;
-        waitTimer = waitTime;
+        waitTimer = Random.Range(waitTimeMin, waitTimeMax);
     }
 }

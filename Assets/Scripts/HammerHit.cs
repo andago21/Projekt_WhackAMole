@@ -1,15 +1,16 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 public class HammerHit : MonoBehaviour
 {
-    public UnityEvent onHit;
-
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Mole"))
+        Debug.Log("Kollision mit: " + collision.gameObject.name);
+
+        MoleController mole = collision.gameObject.GetComponent<MoleController>();
+        if (mole != null)
         {
-            onHit.Invoke();
+            mole.OnHit();
+            GameManager.Instance.AddScore();
         }
     }
 }

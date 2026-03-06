@@ -266,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 327704744}
   - component: {fileID: 327704743}
   - component: {fileID: 327704742}
+  - component: {fileID: 327704746}
   m_Layer: 0
   m_Name: Mole (8)
   m_TagString: Mole
@@ -403,7 +404,8 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
 --- !u!136 &327704743
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -419,7 +421,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -484,6 +486,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327704740}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &327704746
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327704740}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &404084408
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +526,7 @@ GameObject:
   - component: {fileID: 404084412}
   - component: {fileID: 404084411}
   - component: {fileID: 404084410}
+  - component: {fileID: 404084414}
   m_Layer: 0
   m_Name: Mole (3)
   m_TagString: Mole
@@ -534,7 +564,8 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
 --- !u!136 &404084411
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -550,7 +581,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -615,6 +646,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404084408}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &404084414
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404084408}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &419314273
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,6 +1027,7 @@ GameObject:
   - component: {fileID: 646389587}
   - component: {fileID: 646389586}
   - component: {fileID: 646389585}
+  - component: {fileID: 646389589}
   m_Layer: 0
   m_Name: Mole (6)
   m_TagString: Mole
@@ -1006,7 +1065,8 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
 --- !u!136 &646389586
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1022,7 +1082,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1087,6 +1147,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646389583}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &646389589
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646389583}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1284,7 @@ GameObject:
   - component: {fileID: 720413046}
   - component: {fileID: 720413045}
   - component: {fileID: 720413044}
+  - component: {fileID: 720413048}
   m_Layer: 0
   m_Name: Mole (4)
   m_TagString: Mole
@@ -1234,7 +1322,8 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
 --- !u!136 &720413045
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1250,7 +1339,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1315,6 +1404,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720413042}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &720413048
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720413042}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &878651135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,6 +1502,7 @@ GameObject:
   - component: {fileID: 882093516}
   - component: {fileID: 882093515}
   - component: {fileID: 882093514}
+  - component: {fileID: 882093518}
   m_Layer: 0
   m_Name: Mole (5)
   m_TagString: Mole
@@ -1423,7 +1540,8 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
 --- !u!136 &882093515
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1439,7 +1557,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1504,6 +1622,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882093512}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &882093518
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882093512}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &960995278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9035404246257284583, guid: fd6f7b084f2d24023ae9fd83cea69344, type: 3}
@@ -2073,6 +2218,7 @@ GameObject:
   - component: {fileID: 1094213727}
   - component: {fileID: 1094213726}
   - component: {fileID: 1094213730}
+  - component: {fileID: 1094213731}
   m_Layer: 0
   m_Name: Mole
   m_TagString: Mole
@@ -2095,7 +2241,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2190,7 +2336,35 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
+--- !u!54 &1094213731
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094213725}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1191208900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,6 +2726,7 @@ GameObject:
   - component: {fileID: 1212684386}
   - component: {fileID: 1212684385}
   - component: {fileID: 1212684384}
+  - component: {fileID: 1212684388}
   m_Layer: 0
   m_Name: Mole (2)
   m_TagString: Mole
@@ -2589,7 +2764,8 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
 --- !u!136 &1212684385
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2605,7 +2781,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2670,6 +2846,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212684382}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1212684388
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212684382}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1250911217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,6 +3453,7 @@ GameObject:
   - component: {fileID: 1637618038}
   - component: {fileID: 1637618037}
   - component: {fileID: 1637618036}
+  - component: {fileID: 1637618040}
   m_Layer: 0
   m_Name: Mole (1)
   m_TagString: Mole
@@ -3287,7 +3491,8 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
 --- !u!136 &1637618037
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3303,7 +3508,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3368,6 +3573,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637618034}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1637618040
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637618034}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1667417765
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,6 +3730,7 @@ GameObject:
   - component: {fileID: 1673149861}
   - component: {fileID: 1673149860}
   - component: {fileID: 1673149859}
+  - component: {fileID: 1673149863}
   m_Layer: 0
   m_Name: Mole (7)
   m_TagString: Mole
@@ -3535,7 +3768,8 @@ MonoBehaviour:
   upPosition: 0.5
   downPosition: -0.5
   speed: 2
-  waitTime: 1
+  waitTimeMin: 0.5
+  waitTimeMax: 3
 --- !u!136 &1673149860
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3551,7 +3785,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3616,6 +3850,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673149857}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1673149863
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673149857}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1680501586
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,7 +4594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 2129654431}
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
@@ -4491,7 +4753,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4509,21 +4771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab5d9654fad7904198a4f59e8eb7a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HammerHit
-  onHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 878651136}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: AddScore
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2142121470
 GameObject:
   m_ObjectHideFlags: 0
