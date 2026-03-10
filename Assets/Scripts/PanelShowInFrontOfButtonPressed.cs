@@ -32,7 +32,7 @@ public class PanelShowInFrontOfButtonPressed : MonoBehaviour
             panelObject.SetActive(!panelObject.activeSelf);
         }
         
-        if (panelObject.activeSelf)
+        if (panelObject != null && panelObject.activeSelf)
         {
             UpdatePanelPosition();
         }
