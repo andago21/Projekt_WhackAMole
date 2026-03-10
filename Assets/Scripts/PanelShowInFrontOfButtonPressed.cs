@@ -15,6 +15,8 @@ public class PanelShowInFrontOfButtonPressed : MonoBehaviour
     [SerializeField] private float distanceInFront = 1.5f;
     [SerializeField] private float heightOffset = 0.5f;
 
+    private Canvas panelCanvas;
+
     private void OnEnable()
     {
         secondaryAction.action.Enable();
@@ -25,14 +27,19 @@ public class PanelShowInFrontOfButtonPressed : MonoBehaviour
         secondaryAction.action.Disable();
     }
 
+    private void Start()
+    {
+        panelCanvas = panelObject.GetComponentInChildren<Canvas>(true);
+    }
+
     private void Update()
     {
         if (secondaryAction.action.WasPressedThisFrame())
         {
-            panelObject.SetActive(!panelObject.activeSelf);
+            panelCanvas.enabled = !panelCanvas.enabled;
         }
         
-        if (panelObject != null && panelObject.activeSelf)
+        if (panelObject != null && panelCanvas.enabled)
         {
             UpdatePanelPosition();
         }
