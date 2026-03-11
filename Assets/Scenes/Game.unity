@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 25fb8b950db97cf47b5fd5b37f21de31, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -272,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2223,15 +2223,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   moles:
-  - {fileID: 1094213730}
-  - {fileID: 1637618036}
-  - {fileID: 1212684384}
-  - {fileID: 404084410}
-  - {fileID: 720413044}
-  - {fileID: 882093514}
-  - {fileID: 646389585}
-  - {fileID: 1673149859}
-  - {fileID: 327704742}
+  - {fileID: 937622224054414716}
+  - {fileID: 808695183}
+  - {fileID: 852675822}
+  - {fileID: 1902342756}
+  - {fileID: 640819266}
+  - {fileID: 1327753940}
+  - {fileID: 1181188429}
+  - {fileID: 373457972}
+  - {fileID: 1818620663}
   roundDuration: 60
   scoreText: {fileID: 0}
   timerText: {fileID: 0}
@@ -2778,11 +2778,11 @@ Transform:
   - {fileID: 808695181}
   - {fileID: 852675820}
   - {fileID: 1902342754}
+  - {fileID: 640819264}
+  - {fileID: 1327753938}
   - {fileID: 1181188427}
   - {fileID: 373457970}
   - {fileID: 1818620661}
-  - {fileID: 640819264}
-  - {fileID: 1327753938}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073341801
@@ -2935,7 +2935,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d0f7846ed4db4cd4eac35f3f1bc5adee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
