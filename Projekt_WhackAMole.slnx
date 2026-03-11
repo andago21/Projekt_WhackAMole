@@ -1,0 +1,15 @@
+﻿<Solution>
+  <Project Path="Unity.XR.PICO.csproj" />
+  <Project Path="Unity.XR.Interaction.Toolkit.Samples.InteractionSimulator.csproj" />
+  <Project Path="Pico.Spatializer.Example.csproj" />
+  <Project Path="PICO.Platform.csproj" />
+  <Project Path="PICO.TobSupport.csproj" />
+  <Project Path="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj" />
+  <Project Path="Unity.XR.PICO.Editor.csproj" />
+  <Project Path="PICO.Platform.Editor.csproj" />
+  <Project Path="Unity.XR.Interaction.Toolkit.Samples.InteractionSimulator.Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Pico.Spatializer.csproj" />
+  <Project Path="Pico.Spatializer.Editor.csproj" />
+  <Project Path="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj" />
+</Solution>
