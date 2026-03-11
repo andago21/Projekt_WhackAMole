@@ -14,6 +14,7 @@ public class PanelShowInFrontOfButtonPressed : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float distanceInFront = 1.5f;
     [SerializeField] private float heightOffset = 0.5f;
+    [SerializeField] private float rightOffset = 0.5f;
 
     private Canvas panelCanvas;
 
@@ -51,17 +52,19 @@ public class PanelShowInFrontOfButtonPressed : MonoBehaviour
         forward.y = 0f;
         forward.Normalize();
 
-        Vector3 targetPos = playerTransform.position + forward * distanceInFront;
+        Vector3 right = playerTransform.right;
+        right.y = 0f;
+        right.Normalize();
+
+        Vector3 targetPos = playerTransform.position
+                            + forward * distanceInFront
+                            + right * rightOffset;
+
         targetPos.y = playerTransform.position.y + heightOffset;
 
         panelObject.transform.position = targetPos;
-        
-        Vector3 lookDir = panelObject.transform.position - playerTransform.position;
-        lookDir.y = 0f;
 
-        if (lookDir.sqrMagnitude > 0.001f)
-        {
-            panelObject.transform.rotation = Quaternion.LookRotation(lookDir);
-        }
+        Vector3 euler = playerTransform.eulerAngles;
+        panelObject.transform.rotation = Quaternion.Euler(0f, euler.y, 0f);
     }
 }
