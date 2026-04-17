@@ -4812,6 +4812,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1778677573}
   distanceInFront: 1.5
   heightOffset: 0.5
+  rightOffset: 0.5
 --- !u!114 &1813861112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4829,6 +4830,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1778677573}
   distanceInFront: 3.5
   heightOffset: 0.5
+  rightOffset: 0.5
 --- !u!114 &1813861113
 MonoBehaviour:
   m_ObjectHideFlags: 0
