@@ -11,6 +11,7 @@ public class HammerHit : MonoBehaviour
         {
             mole.OnHit();
             GameManager.Instance.AddScore();
+            AudioManager.Instance.PlayHit();
         }
     }
 }

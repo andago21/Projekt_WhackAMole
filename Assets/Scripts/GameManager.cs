@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         if (gameOverPanel) gameOverPanel.SetActive(false);
         if (scoreText) scoreText.text = "Score: 0";
         foreach (var m in moles) m.SetActive(true);
+        AudioManager.Instance.PlayMusic();
         Debug.Log("Round Started");
     }
 
@@ -47,5 +48,6 @@ public class GameManager : MonoBehaviour
         isRunning = false;
         foreach (var w in moles) w.SetActive(false);
         if (gameOverPanel) gameOverPanel.SetActive(true);
+        HighscoreManager.Instance.TrySave(score);
     }
 }
