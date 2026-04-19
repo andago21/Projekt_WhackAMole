@@ -38,4 +38,13 @@ public class HighscoreManager : MonoBehaviour
         if (File.Exists(savePath))
             data = JsonUtility.FromJson<HighscoreData>(File.ReadAllText(savePath));
     }
+
+    public void ResetHighscore()
+    {
+        data.highscore = 0;
+        File.WriteAllText(savePath, JsonUtility.ToJson(data));
+        Debug.Log("Highscore resettet!");
+
+        FindObjectOfType<HighscoreDisplay>()?.UpdateDisplay();
+    }
 }

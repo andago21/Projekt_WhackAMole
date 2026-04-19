@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -46,8 +48,21 @@ public class GameManager : MonoBehaviour
     void EndRound()
     {
         isRunning = false;
-        foreach (var w in moles) w.SetActive(false);
-        if (gameOverPanel) gameOverPanel.SetActive(true);
+        foreach (var m in moles) m.SetActive(false);
         HighscoreManager.Instance.TrySave(score);
+
+        if (gameOverPanel) gameOverPanel.SetActive(true);
+
+        Time.timeScale = 0f;
+
+        StartCoroutine(ResetAfterDelay());
+    }
+
+    private IEnumerator ResetAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(5f);
+        Time.timeScale = 1f; 
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
